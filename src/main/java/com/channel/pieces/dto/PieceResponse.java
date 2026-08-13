@@ -1,5 +1,14 @@
 package com.channel.pieces.dto;
 
-public record PieceResponse(Long id, String type, String serialNumber, String size, String productionDate, String reference) {
+import com.channel.pieces.domains.PieceType;
+
+public record PieceResponse(
+    Long id,
+    PieceType type,
+    String serialNumber,
+    String size,
+    String productionDate,
+    String reference
+) {
 
 }

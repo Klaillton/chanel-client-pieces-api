@@ -31,4 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
-.vscode/
+
+# Temporary backup from nested-repo cleanup (safe to delete)
+.git-outer-backup/

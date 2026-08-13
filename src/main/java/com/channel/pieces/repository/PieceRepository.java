@@ -1,6 +1,7 @@
 package com.channel.pieces.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Repository;
 
@@ -17,5 +18,7 @@ public interface PieceRepository {
     List<Piece> findAll();
 
     List<Piece> findByFilters(PieceType type, String reference, String size);
+
+    Optional<Piece> findById(Long id);
 
 }

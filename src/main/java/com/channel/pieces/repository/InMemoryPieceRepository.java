@@ -2,6 +2,7 @@ package com.channel.pieces.repository;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -44,5 +45,15 @@ public class InMemoryPieceRepository implements PieceRepository {
                 .filter(piece -> size == null || size.isBlank()
             || size.equalsIgnoreCase(piece.getSize()))
             .toList();
+    }
+
+    @Override
+    public Optional<Piece> findById(Long id) {
+        if(id == null) {
+            return Optional.empty();
+        }
+        return pieces.stream()
+                .filter(piece -> id.equals(piece.getId()))
+                .findFirst();
     }
 }

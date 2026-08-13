@@ -90,8 +90,8 @@ public class CsvPieceLoader implements ApplicationRunner {
         return piece;
     }
 
-    private String requiredField(CSVRecord record, int index, String fieldName) {
-        String value = record.get(index);
+    private String requiredField(CSVRecord requiredRecord, int index, String fieldName) {
+        String value = requiredRecord.get(index);
         if(value == null || value.isBlank()) {
             throw new IllegalArgumentException("Missing required field: " + fieldName);
         }
