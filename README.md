@@ -96,7 +96,7 @@ Returns a single piece by its technical ID.
 |--------|-------------------------------------------------------------------------|
 | 200    | Piece found                                                             |
 | 400    | Invalid ID (null, ≤ 0, or non-numeric) **or** piece does not exist      |
-| 500    | Unhandled server error                                                  |
+| 404    | Piece does not exist                                                  |
 
 `PieceService.findById` throws `IllegalArgumentException` both for an invalid ID and for a missing piece. The global handler maps that exception to **400**.
 
