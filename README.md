@@ -1,5 +1,7 @@
 # Chanel Client Pieces API
 
+> **Original submission:** the take-home was delivered on 2026-08-13 under the requested 1h30 timebox, written without AI. That exact version is preserved on the [`submission-2026-08-13` branch](https://github.com/Klaillton/chanel-client-pieces-api/tree/submission-2026-08-13) and [tag](https://github.com/Klaillton/chanel-client-pieces-api/tree/refs/tags/submission-2026-08-13). `main` keeps evolving from there.
+
 Spring Boot backend that integrates piece data from an external CSV and exposes it through a REST API for the mobile app and back-office.
 
 ## Overview
